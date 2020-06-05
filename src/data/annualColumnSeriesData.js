@@ -1,4 +1,4 @@
-export const columnSeriesData = [
+export const annualColumnSeriesData = [
   {
     name: "Sales",
     data: [

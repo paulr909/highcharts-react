@@ -1,4 +1,4 @@
-import { columnSeriesData } from "../data/columnSeriesData";
+import { annualColumnSeriesData } from "../data/annualColumnSeriesData";
 
 export const lineOptions = {
   chart: {
@@ -51,5 +51,5 @@ export const lineOptions = {
       borderWidth: 0
     }
   },
-  series: columnSeriesData
+  series: annualColumnSeriesData
 };

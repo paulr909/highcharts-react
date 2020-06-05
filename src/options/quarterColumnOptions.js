@@ -1,9 +1,6 @@
-import {
-  annualColumnSeriesData,
-  annualCategories
-} from "../data/columnSeriesData";
+import { quarterColumnSeriesData } from "../data/quarterColumnSeriesData";
 
-export const columnOptions = {
+export const quarterColumnOptions = {
   chart: {
     type: "column"
   },
@@ -17,7 +14,20 @@ export const columnOptions = {
     enabled: false
   },
   xAxis: {
-    categories: annualCategories,
+    categories: [
+      "Week 41",
+      "Week 42",
+      "Week 43",
+      "Week 44",
+      "Week 45",
+      "Week 46",
+      "Week 47",
+      "Week 48",
+      "Week 49",
+      "Week 50",
+      "Week 51",
+      "Week 52"
+    ],
     crosshair: true
   },
   yAxis: {
@@ -41,5 +51,5 @@ export const columnOptions = {
       borderWidth: 0
     }
   },
-  series: annualColumnSeriesData
+  series: quarterColumnSeriesData
 };

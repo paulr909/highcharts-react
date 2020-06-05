@@ -1,9 +1,6 @@
-import {
-  annualColumnSeriesData,
-  annualCategories
-} from "../data/columnSeriesData";
+import { annualColumnSeriesData } from "../data/annualColumnSeriesData";
 
-export const columnOptions = {
+export const annualColumnOptions = {
   chart: {
     type: "column"
   },
@@ -17,7 +14,20 @@ export const columnOptions = {
     enabled: false
   },
   xAxis: {
-    categories: annualCategories,
+    categories: [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ],
     crosshair: true
   },
   yAxis: {
