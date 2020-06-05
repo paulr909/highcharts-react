@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Highcharts from "highcharts";
-// import ColumnChart from "../../components/charts/ColumnChart";
-// import { annualColumnOptions } from "../../options/annualColumnOptions";
-// import { quarterColumnOptions } from "../../options/quarterColumnOptions";
-import LineChart from "../charts/LineChart";
-import { annualLineOptions } from "../../options/annualLineOptions";
-import { quarterLineOptions } from "../../options/quarterLineOptions";
+import ColumnChart from "../../components/charts/ColumnChart";
+import { annualColumnOptions } from "../../options/annualColumnOptions";
+import { quarterColumnOptions } from "../../options/quarterColumnOptions";
+// import LineChart from "../charts/LineChart";
+// import { annualLineOptions } from "../../options/annualLineOptions";
+// import { quarterLineOptions } from "../../options/quarterLineOptions";
 import chartIcon from "../../assets/chart-icon.svg";
 import classes from "./SalesDashboard.module.css";
 
 const SalesDashboard = () => {
   const [options, setOptions] = useState({
     chart: {
-      type: "line"
+      type: "column"
     },
     title: {
       text: ""
@@ -103,7 +103,7 @@ const SalesDashboard = () => {
   const handleClick = e => {
     const { value } = e.target;
     const isAnnual = value === "annual";
-    const newOptions = isAnnual ? annualLineOptions : quarterLineOptions;
+    const newOptions = isAnnual ? annualColumnOptions : quarterColumnOptions;
 
     setOptions(newOptions);
   };
@@ -125,8 +125,8 @@ const SalesDashboard = () => {
           Last Quarter
         </button>
       </div>
-      {/*<ColumnChart options={options} highcharts={Highcharts} />*/}
-      <LineChart options={options} highcharts={Highcharts} />
+      <ColumnChart options={options} highcharts={Highcharts} />
+      {/*<LineChart options={options} highcharts={Highcharts} />*/}
     </div>
   );
 };
