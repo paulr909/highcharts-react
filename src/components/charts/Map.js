@@ -1,6 +1,7 @@
 import React from "react";
 import HighchartsReact from "highcharts-react-official";
 import classes from "./Map.module.css";
+// Map Chart with constructorType={"mapChart"}
 
 const MapChart = ({ options, highcharts }) => {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Highcharts from "highcharts";
-import PieChart from "../charts/PieChart";
+import Chart from "../charts/Chart";
 import { pieOptions } from "../../options/pieOptions";
 import chartIcon from "../../assets/chart-icon.svg";
 import classes from "./Dashboard.module.css";
@@ -16,7 +16,7 @@ const Dashboard = () => {
         <Link to="/sales-dashboard">Sales Dashboard</Link>
         <Link to="/map-dashboard">Map Dashboard</Link>
       </header>
-      <PieChart options={pieOptions} highcharts={Highcharts} />
+      <Chart options={pieOptions} highcharts={Highcharts} />
     </div>
   );
 };

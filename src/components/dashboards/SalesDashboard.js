@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Highcharts from "highcharts";
-import ColumnChart from "../../components/charts/ColumnChart";
+import Chart from "../../components/charts/Chart";
 import { annualColumnOptions } from "../../options/annualColumnOptions";
 import { quarterColumnOptions } from "../../options/quarterColumnOptions";
-// import LineChart from "../charts/LineChart";
-// import { annualLineOptions } from "../../options/annualLineOptions";
-// import { quarterLineOptions } from "../../options/quarterLineOptions";
 import chartIcon from "../../assets/chart-icon.svg";
 import classes from "./SalesDashboard.module.css";
 
@@ -125,8 +122,7 @@ const SalesDashboard = () => {
           Last Quarter
         </button>
       </div>
-      <ColumnChart options={options} highcharts={Highcharts} />
-      {/*<LineChart options={options} highcharts={Highcharts} />*/}
+      <Chart options={options} highcharts={Highcharts} />
     </div>
   );
 };

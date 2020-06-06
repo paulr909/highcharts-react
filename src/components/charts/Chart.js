@@ -1,8 +1,9 @@
 import React, { useRef } from "react";
 import HighchartsReact from "highcharts-react-official";
-import classes from "./LineChart.module.css";
+import classes from "./Chart.module.css";
+// Generic Chart for use in Line, Column, Pie charts
 
-const LineChart = ({ options, highcharts }) => {
+const Chart = ({ options, highcharts }) => {
   const chart = useRef(null);
 
   const handleExport = () => {
@@ -24,4 +25,4 @@ const LineChart = ({ options, highcharts }) => {
   );
 };
 
-export default LineChart;
+export default Chart;
