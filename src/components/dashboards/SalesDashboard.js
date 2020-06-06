@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Highcharts from "highcharts";
 import Chart from "../../components/charts/Chart";
-import { annualColumnOptions } from "../../options/annualColumnOptions";
-import { quarterColumnOptions } from "../../options/quarterColumnOptions";
+import { annualOptions } from "../../options/annualOptions";
+import { quarterOptions } from "../../options/quarterOptions";
 import chartIcon from "../../assets/chart-icon.svg";
 import classes from "./SalesDashboard.module.css";
 
@@ -100,7 +100,7 @@ const SalesDashboard = () => {
   const handleClick = e => {
     const { value } = e.target;
     const isAnnual = value === "annual";
-    const newOptions = isAnnual ? annualColumnOptions : quarterColumnOptions;
+    const newOptions = isAnnual ? annualOptions : quarterOptions;
 
     setOptions(newOptions);
   };

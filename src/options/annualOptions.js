@@ -1,6 +1,6 @@
-import { annualColumnSeriesData } from "../data/annualColumnSeriesData";
+import { annualSeriesData } from "../data/annualSeriesData";
 
-export const annualColumnOptions = {
+export const annualOptions = {
   chart: {
     type: "column"
   },
@@ -51,5 +51,5 @@ export const annualColumnOptions = {
       borderWidth: 0
     }
   },
-  series: annualColumnSeriesData
+  series: annualSeriesData
 };

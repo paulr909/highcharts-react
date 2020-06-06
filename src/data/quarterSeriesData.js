@@ -1,4 +1,4 @@
-export const quarterColumnSeriesData = [
+export const quarterSeriesData = [
   {
     name: "Sales",
     data: [500, 390, 670, 600, 780, 440, 600, 680, 550, 475, 700, 795]
