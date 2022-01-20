@@ -94,6 +94,7 @@ const SalesDashboard = () => {
         <Link to="/sales-dashboard">Sales Dashboard</Link>
         <Link to="/map-dashboard">Map Dashboard</Link>
       </header>
+      <Chart options={options} highcharts={Highcharts} />
       <div className={classes.buttonContainer}>
         <button value="annual" onClick={handleClick}>
           Annual
@@ -102,7 +103,6 @@ const SalesDashboard = () => {
           Last Quarter
         </button>
       </div>
-      <Chart options={options} highcharts={Highcharts} />
     </div>
   );
 };
