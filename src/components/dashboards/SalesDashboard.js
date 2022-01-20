@@ -5,21 +5,21 @@ import Chart from "../../components/charts/Chart";
 import { annualOptions } from "../../options/annualOptions";
 import { quarterOptions } from "../../options/quarterOptions";
 import chartIcon from "../../assets/chart-icon.svg";
-import classes from "./SalesDashboard.module.css";
+import classes from "./Dashboard.module.css";
 
 const SalesDashboard = () => {
   const [options, setOptions] = useState({
     chart: {
-      type: "column"
+      type: "column",
     },
     title: {
-      text: ""
+      text: "",
     },
     subtitle: {
-      text: ""
+      text: "",
     },
     credits: {
-      enabled: false
+      enabled: false,
     },
     xAxis: {
       categories: [
@@ -34,15 +34,15 @@ const SalesDashboard = () => {
         "September",
         "October",
         "November",
-        "December"
+        "December",
       ],
-      crosshair: true
+      crosshair: true,
     },
     yAxis: {
       min: 0,
       title: {
-        text: ""
-      }
+        text: "",
+      },
     },
     tooltip: {
       headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
@@ -51,53 +51,33 @@ const SalesDashboard = () => {
         '<td style="padding:0"><b>£{point.y:.2f}</b></td></tr>',
       footerFormat: "</table>",
       shared: true,
-      useHTML: true
+      useHTML: true,
     },
     plotOptions: {
       column: {
         pointPadding: 0.2,
-        borderWidth: 0
-      }
+        borderWidth: 0,
+      },
     },
     series: [
       {
         name: "Sales",
         data: [
-          3910,
-          3706,
-          2850,
-          4005,
-          3750,
-          2912,
-          3200,
-          3645,
-          4205,
-          3211,
-          3354,
-          3904
-        ]
+          3910, 3706, 2850, 4005, 3750, 2912, 3200, 3645, 4205, 3211, 3354,
+          3904,
+        ],
       },
       {
         name: "National Average",
         data: [
-          4010,
-          3600,
-          2900,
-          3550,
+          4010, 3600, 2900, 3550, 3800, 2900, 3000, 3500, 4000, 3700, 3550,
           3800,
-          2900,
-          3000,
-          3500,
-          4000,
-          3700,
-          3550,
-          3800
-        ]
-      }
-    ]
+        ],
+      },
+    ],
   });
 
-  const handleClick = e => {
+  const handleClick = (e) => {
     const { value } = e.target;
     const isAnnual = value === "annual";
     const newOptions = isAnnual ? annualOptions : quarterOptions;

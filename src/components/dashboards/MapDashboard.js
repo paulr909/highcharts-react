@@ -4,7 +4,7 @@ import Highcharts from "highcharts";
 import Map from "../../components/charts/Map";
 import { mapOptions } from "../../options/mapOptions";
 import chartIcon from "../../assets/chart-icon.svg";
-import classes from "./MapDashboard.module.css";
+import classes from "./Dashboard.module.css";
 
 const MapDashboard = () => {
   return (

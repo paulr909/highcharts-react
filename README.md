@@ -5,7 +5,7 @@
 Using React Hooks and CSS Modules
 
 ```
-yarn install
+npm install
 
-yarn start
+npm start
 ```

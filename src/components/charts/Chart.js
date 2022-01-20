@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import HighchartsReact from "highcharts-react-official";
 import classes from "./Chart.module.css";
-// Generic Chart for use in Line, Column, Pie charts
+// Generic Chart for use with Line, Column, Pie charts
 
 const Chart = ({ options, highcharts }) => {
   const chart = useRef(null);
